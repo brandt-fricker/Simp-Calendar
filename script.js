@@ -13,11 +13,11 @@ function buildTimeSlot(hour){
     .attr("id", "hour-" +hour)
     .attr("class", "row time-block")
     var timeLabel = $("<div>")
-    if(hour >= 12){
-        timeLabel.text(hour -12 + "PM");
-    }else{
-        timeLabel.text(hour + "AM")
-    }
+    // if(hour >= 12){
+    //     timeLabel.text(hour -12 + "PM");
+    // }else{
+    //     timeLabel.text(hour + "AM")
+    // }
     var textArea = $("<textarea>")
     .attr("class", "col-md-10 description")
     var btn = $("button")
