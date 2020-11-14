@@ -1,55 +1,41 @@
 
-var time = luxon.DateTime.local().toLocaleString(luxon.DateTime.TIME_24_SIMPLE)
-console.log(time+" Actual Time")
-var calHour = document.querySelectorAll('.hour')
+
+//Loads the date on top of page at page load
+$(window).on("load", function(){
+    var currentDay = moment().format("MMMM dddd Do YYYY");
+$("#currentDay").append(currentDay);
+})
+// global variables 
+var tb = [document.querySelector("#timeblock1"), document.querySelector("#timeblock2"),
+document.querySelector("#timeblock3"),
+document.querySelector("#timeblock4"),
+document.querySelector("#timeblock5"),
+document.querySelector("#timeblock6"),
+document.querySelector("#timeblock7"),
+document.querySelector("#timeblock8"),
+document.querySelector("#timeblock9")]
+
+
+var callHour = document.querySelectorAll('.hour')
+var callRow = document.querySelectorAll(".description")
 var hour = luxon.DateTime.local().toFormat("HH")
-console.log(hour+" Military time")
-// var description = document.querySelectorAll(".description");
-// console.log(description)
-// var milTime = document.querySelectorAll(".hour").textContent
-// console.log(milTime)
-var time1 = document.getElementById("timeblock1").textContent
-var time2 = document.getElementById("timeblock2").textContent
-var time3 = document.getElementById("timeblock3").textContent
-var time4 = document.getElementById("timeblock4").textContent
-var time5 = document.getElementById("timeblock5").textContent
-var time6 = document.getElementById("timeblock6").textContent
-var time7 = document.getElementById("timeblock7").textContent
-var time8 = document.getElementById("timeblock8").textContent
-var time9 = document.getElementById("timeblock9").textContent
-
-var arr=[time1,time2,time3,time4,time5,time6,time7,time8,time9]
-
-for (let i = 0; i < arr.length; i++) {
-   var checkTime = arr[i].slice(0,2);
-   console.log(checkTime)
-   if(checkTime === hour){
-    document.getElementById("see").style.background = "indianred"
-   }else if (checkTime < hour ){
-       document.getElementById("see").style.background = "lightgrey"
-   }else{
-       console.log("add stuff here")
-   }
-        
+//for loop to check the time and reference it to the divs with color
+// indianred===current hour
+//lightgrey===hours past
+//lightblue===hours still to come
+for (let i = 0; i < callHour.length; i++) {
+    var checker = callHour[i].innerHTML.slice(0,2);
+    
+    if(checker === hour && hour === tb[i].innerHTML.slice(0,2)){
+        tb[i].nextElementSibling.style.background = "indianred"
+    }else if(checker<hour && hour > tb[i].innerHTML.slice(0,2)){
+        tb[i].nextElementSibling.style.background = "lightgrey"
+    }else{
+        tb[i].nextElementSibling.style.background = "lightblue"
     }
-// document.getElementById("see").style.background = "indianred"
+}
+var saveButton = document.querySelectorAll(".saveBtn")
 
-
-
-// document.querySelectorAll('.saveBtn').forEach(item => {
-//     item.addEventListener("click", event => {
-//         alert("You Saved Me!")
-//     })
-// })
-
-
-$(".saveBtn").on("click", function() {
-    alert("I've been clicked!");
-    
-    
-  });
-
-
-
-
-
+$(saveButton).on("click",function(){
+    alert("You saved me!")
+})
