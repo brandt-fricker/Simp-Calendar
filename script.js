@@ -15,7 +15,6 @@ document.querySelector("#timeblock7"),
 document.querySelector("#timeblock8"),
 document.querySelector("#timeblock9")]
 
-
 var callHour = document.querySelectorAll('.hour')
 var callRow = document.querySelectorAll(".description")
 var hour = luxon.DateTime.local().toFormat("HH")
@@ -28,14 +27,19 @@ for (let i = 0; i < callHour.length; i++) {
     
     if(checker === hour && hour === tb[i].innerHTML.slice(0,2)){
         tb[i].nextElementSibling.style.background = "indianred"
-    }else if(checker<hour && hour > tb[i].innerHTML.slice(0,2)){
+    }else if(checker < hour && hour > tb[i].innerHTML.slice(0,2)){
         tb[i].nextElementSibling.style.background = "lightgrey"
     }else{
         tb[i].nextElementSibling.style.background = "lightblue"
     }
 }
 var saveButton = document.querySelectorAll(".saveBtn")
-
+//alerts the user they clicked on the save button
+// and saves to local storage
 $(saveButton).on("click",function(){
     alert("You saved me!")
+   
 })
+    
+
+

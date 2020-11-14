@@ -76,3 +76,12 @@ textarea{
 .row{
   margin: 10px;
 }
+#red{
+  color: indianred;
+}
+#blue{
+  color: lightblue;
+}
+#grey{
+  color: lightgrey;
+}
