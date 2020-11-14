@@ -72,6 +72,8 @@ textarea{
 
 .hour{
   background: lightgreen;
+  font-size: 20px;
+  font-family: "Rock Salt";
 }
 .row{
   margin: 10px;
@@ -84,4 +86,7 @@ textarea{
 }
 #grey{
   color: lightgrey;
+}
+.display-3{
+  font-family:"Bad Script";
 }
