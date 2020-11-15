@@ -4,7 +4,6 @@
 $(window).on("load", function(){
     var currentDay = moment().format("MMMM dddd Do YYYY");
 $("#currentDay").append(currentDay);
-})
 // global variables 
 var tb = [document.querySelector("#timeblock1"), document.querySelector("#timeblock2"),
 document.querySelector("#timeblock3"),
@@ -13,11 +12,26 @@ document.querySelector("#timeblock5"),
 document.querySelector("#timeblock6"),
 document.querySelector("#timeblock7"),
 document.querySelector("#timeblock8"),
-document.querySelector("#timeblock9")]
+document.querySelector("#timeblock9")];
 
-var callHour = document.querySelectorAll('.hour')
-var callRow = document.querySelectorAll(".description")
-var hour = luxon.DateTime.local().toFormat("HH")
+var callHour = document.querySelectorAll('.hour');
+// var userInput = document.querySelectorAll(".description")
+var hour = luxon.DateTime.local().toFormat("HH");
+
+var currentSchedule = JSON.parse(localStorage.getItem("userEvents")) || {};
+
+function displayCurrentSchedule(){
+    for (var key in currentSchedule) {
+        $(`${key}`).val(currentSchedule[key]);
+        // console.log($(`#${key}`));
+        // var textarea = $(`${key}`);
+        // console.log(`${key}`)
+    }
+}
+displayCurrentSchedule();
+
+
+
 //for loop to check the time and reference it to the divs with color
 // indianred===current hour
 //lightgrey===hours past
@@ -32,13 +46,25 @@ for (let i = 0; i < callHour.length; i++) {
     }else{
         tb[i].nextElementSibling.style.background = "lightblue"
     }
-}
-var saveButton = document.querySelectorAll(".saveBtn")
+};
+var saveButton = document.querySelectorAll(".saveBtn");
 //alerts the user they clicked on the save button
-// and saves to local storage
-$(saveButton).on("click",function(){
-    alert("You saved me!")
-   
+
+$(".saveBtn").on("click",function(){
+    
+    var textArea = $(this).prev()
+    console.log(textArea)
+    var timeId = textArea.attr("id");
+    var event = textArea.val();
+    currentSchedule[timeId]=event;
+    localStorage.setItem("userEvents", JSON.stringify(currentSchedule));
+    
+    
+    
+    alert("You saved me!");
+    
+})
+
 })
     
 
