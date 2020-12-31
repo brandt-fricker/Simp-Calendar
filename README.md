@@ -1,5 +1,21 @@
 # Simp-Calendar
 ![model of calendar](Calgif.gif)
+
+## Introduction
+
+## Description
+
+## Table of Contents
+
+## Contributing
+
+### Steps for Contributing
+
+## Conclusion
+
+## License
+
+## ## GitHub Repo, Profile, Questions
 This simple calendar application will allow a user to save events for each 
 hour of the day. The hours presented represent "normal business hours", 9am to 5pm.  
 The calendar will allow the user to input text and have the option to save what is inputted. 
