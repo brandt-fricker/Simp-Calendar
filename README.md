@@ -18,3 +18,7 @@ hour of the day. The hours presented represent "normal business hours", 9am to 5
 ## License
 
 ## ## GitHub Repo, Profile, Questions
+* View [Simp-Calendar](https://brandt-fricker.github.io/Simp-Calendar/)
+* [Repository](https://github.com/brandt-fricker/Simp-Calendar)
+* [GitHub Profile](https://github.com/brandt-fricker)
+* Any questions, comments, or concerns please feel free to contact me, all my info can be found [here](https://drive.google.com/file/d/1lZC64xhP2PnV-DXlreSIA11vyq-aKmZ2/view?usp=sharing)
