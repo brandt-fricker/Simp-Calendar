@@ -3,6 +3,7 @@
 Start planning your days now with [The Work Day Scheduler](https://brandt-fricker.github.io/Simp-Calendar/)
 
 ## Introduction
+Always running around like a chicken with your head cut off, unsure of what plan or event is next in your busy day? Fortunately the Work Day Scheduler is here to help get your head back on and add some clarity for you.  
 
 ## Description
 This simple calendar application will allow a user to save events for each 
