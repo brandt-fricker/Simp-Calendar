@@ -31,6 +31,7 @@ When contributing to this repository, please first discuss the change you wish t
 5. Submit a pull request.
 
 ## Conclusion
+Don't drown in the unknown, let the Work Day Scheduler help manage your day and keep you on task.
 
 ## License
 ![License](https://img.shields.io/badge/License-MIT-blue)
