@@ -9,6 +9,14 @@ hour of the day. The hours presented represent "normal business hours", 9am to 5
 
 ## Table of Contents
 
+  - [Introduction](#introduction)
+  - [Description](#description)
+  - [Contributing](#contributing)
+  - [Steps for Contributing](#steps-for-contributing)
+  - [Conclusion](#conclusion)
+  - [License](#license)
+  - [GitHub Repo, Profile, Questions](#github-repo-profile-questions)
+  
 ## Contributing
 
 ### Steps for Contributing
@@ -16,8 +24,9 @@ hour of the day. The hours presented represent "normal business hours", 9am to 5
 ## Conclusion
 
 ## License
+![License](https://img.shields.io/badge/License-MIT-blue)
 
-## ## GitHub Repo, Profile, Questions
+## GitHub Repo, Profile, Questions
 * View [Simp-Calendar](https://brandt-fricker.github.io/Simp-Calendar/)
 * [Repository](https://github.com/brandt-fricker/Simp-Calendar)
 * [GitHub Profile](https://github.com/brandt-fricker)
